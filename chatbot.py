@@ -121,6 +121,47 @@ footer {
 </style>
 """, unsafe_allow_html=True)
 
+# css Text Box
+st.markdown("""
+<style>
+
+.stChatInput {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    padding: 12px 30px;
+    background: #F4F7FC;
+    z-index:9998;
+}
+
+.stChatInput > div{
+    background:white;
+    border:1px solid #2D4F73;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(30,58,95,.15);
+}
+
+.stChatInput textarea{
+    font-size:16px;
+    color:#1E3A5F;
+}
+
+.stChatInput button{
+    background:#1E3A5F;
+    color:white;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+}
+
+.stChatInput button:hover{
+    background:#2D4F73;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 st.markdown("""
 <div class="custom-footer">
     © 2026 &nbsp;|&nbsp; Powered by Streamlit • LangChain • Groq
