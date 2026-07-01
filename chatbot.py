@@ -13,6 +13,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# layout 
 st.markdown("""
 <div class="custom-header">
     <h2 style="margin:0;">
@@ -121,7 +123,12 @@ footer {
 </style>
 """, unsafe_allow_html=True)
 
-# css Text Box
+st.markdown("""
+<div class="custom-footer">
+    © 2026 &nbsp;|&nbsp; Powered by Streamlit • LangChain • Groq
+</div>
+""", unsafe_allow_html=True)
+
 st.markdown("""
 <style>
 
@@ -131,7 +138,7 @@ st.markdown("""
     left: 0;
     right: 0;
     padding: 12px 30px;
-    background: #F4F7FC;
+    
     z-index:9998;
 }
 
@@ -144,7 +151,7 @@ st.markdown("""
 
 .stChatInput textarea{
     font-size:16px;
-    color:#1E3A5F;
+   
 }
 
 .stChatInput button{
@@ -161,13 +168,6 @@ st.markdown("""
 
 </style>
 """, unsafe_allow_html=True)
-
-st.markdown("""
-<div class="custom-footer">
-    © 2026 &nbsp;|&nbsp; Powered by Streamlit • LangChain • Groq
-</div>
-""", unsafe_allow_html=True)
-
 
 # initialize the ChatGroq model with the API key from environment variables
 #chat_history = []
