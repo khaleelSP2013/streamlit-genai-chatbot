@@ -8,12 +8,125 @@ load_dotenv()
 # streamlit page setup
 
 st.set_page_config(
-    page_title="Gen AI ChatBot", 
-    page_icon="💬.",
-    layout="centered",
-    ) 
+    page_title="Generative AI ChatBot",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+st.markdown("""
+<div class="custom-header">
+    <h2 style="margin:0;">
+        🤖 Generative AI ChatBot
+    </h2>
+</div>
+""", unsafe_allow_html=True)
 
-st.title("💬 Gen AI ChatBot")
+st.markdown("""
+<style>
+
+/* Hide Streamlit default menu/footer/header */
+#MainMenu {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* App Background */
+.stApp{
+    background:#F4F7FC;
+}
+
+/* ================= HEADER ================= */
+
+.custom-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:65px;
+
+    background:#1E3A5F;
+    color:white;
+
+    border-bottom:0.5px solid #2D4F73;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 25px;
+
+    z-index:9999;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+
+/* ================= FOOTER ================= */
+
+.custom-footer{
+    position:fixed;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:45px;
+
+    background:#1E3A5F;
+    color:white;
+
+    border-top:0.5px solid #2D4F73;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:14px;
+
+    z-index:9999;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+/* Prevent header/footer from covering content */
+.block-container{
+    padding-top:85px !important;
+    padding-bottom:70px !important;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#F4F7FC;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2D4F73;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1E3A5F;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="custom-footer">
+    © 2026 &nbsp;|&nbsp; Powered by Streamlit • LangChain • Groq
+</div>
+""", unsafe_allow_html=True)
+
 
 # initialize the ChatGroq model with the API key from environment variables
 #chat_history = []
