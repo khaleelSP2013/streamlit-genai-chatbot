@@ -125,7 +125,7 @@ footer {
 
 st.markdown("""
 <div class="custom-footer">
-    © 2026 &nbsp;|&nbsp; Powered by Streamlit • LangChain • Groq
+    © 2026 &nbsp;|&nbsp; Chatbot Createed using  • LangChain • Groq
 </div>
 """, unsafe_allow_html=True)
 
