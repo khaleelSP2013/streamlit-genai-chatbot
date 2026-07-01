@@ -8,7 +8,7 @@ load_dotenv()
 # streamlit page setup
 
 st.set_page_config(
-    page_title="Generative AI ChatBot",
+    page_title="Gen AI ChatBot",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -16,7 +16,7 @@ st.set_page_config(
 st.markdown("""
 <div class="custom-header">
     <h2 style="margin:0;">
-        🤖 Generative AI ChatBot
+        🤖 Gen AI ChatBot
     </h2>
 </div>
 """, unsafe_allow_html=True)
